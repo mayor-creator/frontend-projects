@@ -5,9 +5,10 @@ import "./App.css";
 function App() {
 	return (
 		<>
-			<main className="rounded-3xl bg-white">
-				<div className="image rounded-lg">
+			<main className="rounded-3xl bg-white max-w-80 max-h-fit p-5">
+				<div>
 					<img
+						className="rounded-lg"
 						src={qrcodeImage}
 						alt="qr code"
 						height={288}
@@ -15,7 +16,7 @@ function App() {
 					/>
 				</div>
 				<div className="message">
-					<h1 className="text-center font-bold text-2xl">
+					<h1 className="text-center font-bold">
 						Improve your front-end skills by building projects
 					</h1>
 					<p className="text-center">
