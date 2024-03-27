@@ -6,6 +6,12 @@ export default {
 			fontFamily: {
 				sans: ["Outfit", "sans-serif"],
 			},
+			colors: {
+				"light-gray": "#D5E1EF",
+				"grayish-blue": "hsl(220, 15%, 55%)",
+				"dark-blue": "hsl(218, 44%, 22%)",
+				"dark-navy": "#1F314F",
+			},
 		},
 	},
 	plugins: [],
