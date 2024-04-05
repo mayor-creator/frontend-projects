@@ -37,17 +37,19 @@ export function Advice() {
 	let objectItems = data;
 	const message = Object.values(objectItems).map((item) => {
 		return (
-			<>
+			<li key={item.id}>
 				<h1>Advice #{item.id}</h1>
 				<p>{item.advice}</p>
-			</>
+			</li>
 		);
 	});
 
 	return (
 		<>
 			<main className="container">
-				<section>{message}</section>
+				<section>
+					<ul>{message}</ul>
+				</section>
 				<picture>
 					<source
 						srcSet={mobile}
