@@ -38,15 +38,17 @@ export function Advice() {
 	const message = Object.values(objectItems).map((item) => {
 		return (
 			<li key={item.id}>
-				<h1>Advice #{item.id}</h1>
-				<p>{item.advice}</p>
+				<h1 className="font-extrabold  text-neon-green text-center">
+					Advice #{item.id}
+				</h1>
+				<p className="font-extrabold text-[28px] text-center">{item.advice}</p>
 			</li>
 		);
 	});
 
 	return (
 		<>
-			<main className="container">
+			<main className="bg-dark-grayish-blue sm:p-5 rounded-lg">
 				<section>
 					<ul>{message}</ul>
 				</section>
