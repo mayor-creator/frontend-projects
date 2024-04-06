@@ -38,7 +38,7 @@ export function Advice() {
 	const message = Object.values(objectItems).map((item) => {
 		return (
 			<li key={item.id}>
-				<h1 className="font-extrabold  text-neon-green text-center">
+				<h1 className="font-extrabold text-neon-green text-center sm:py-5">
 					Advice #{item.id}
 				</h1>
 				<p className="font-extrabold text-[28px] text-center">{item.advice}</p>
@@ -48,30 +48,36 @@ export function Advice() {
 
 	return (
 		<>
-			<main className="bg-dark-grayish-blue sm:p-5 rounded-lg">
+			<main className="bg-dark-grayish-blue rounded-2xl sm:p-5 sm:max-[343px]:">
 				<section>
 					<ul>{message}</ul>
 				</section>
-				<picture>
-					<source
-						srcSet={mobile}
-						media="(max-width:480px)"
-					/>
-					<source
-						srcSet={desktop}
-						media="(min-width:1440px)"
-					/>
-					<img
-						src={desktop}
-						className="pattern"
-					/>
-				</picture>
 
-				<button onClick={handleClick}>
-					<img
-						src={icon}
-						aria-label="hidden"></img>
-				</button>
+				<section className="sm:p-5">
+					<picture>
+						<source
+							srcSet={mobile}
+							media="(max-width:480px)"
+						/>
+						<source
+							srcSet={desktop}
+							media="(min-width:1440px)"
+						/>
+						<img
+							src={desktop}
+							className="sm:pb-5"
+						/>
+					</picture>
+
+					<button
+						className="bg-neon-green rounded-full absolute sm:mx-[120px]"
+						onClick={handleClick}>
+						<img
+							className="mx-auto"
+							src={icon}
+							aria-label="hidden"></img>
+					</button>
+				</section>
 			</main>
 		</>
 	);
