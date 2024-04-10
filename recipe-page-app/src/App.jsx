@@ -1,5 +1,11 @@
+import { Recipe } from "./Recipe";
+
 function App() {
-	return;
+	return (
+		<>
+			<Recipe></Recipe>
+		</>
+	);
 }
 
 export default App;
