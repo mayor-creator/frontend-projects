@@ -1,5 +1,5 @@
 {
-	"cSpell.words": ["Flexbox", "qrcode", "tailwindcss"],
+	"cSpell.words": ["Flexbox", "qrcode", "tailwindcss", "wenge"],
 	"files.associations": {
 		"*.css": "tailwindcss"
 	}
