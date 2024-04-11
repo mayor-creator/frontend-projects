@@ -1,5 +1,13 @@
 import omeletteImage from "./assets/images/image-omelette.jpeg";
 
+import "../scss/global/_boilerplate.scss";
+import "../scss/global/_colors.scss";
+import "../scss/global/_fonts.scss";
+import "../scss/global/_layout.scss";
+import "../scss/global/_typography.scss";
+import "../scss/component/_body.scss";
+import "../scss/component/_main.scss";
+
 export function Recipe() {
 	return (
 		<>
