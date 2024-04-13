@@ -21,7 +21,8 @@ h3 {
 }
 
 p,
-li {
+li,
+table {
   font-size: clamp(1rem, 1rem + 0vw, 1rem);
   font-family: $font-family_outfit;
 }
