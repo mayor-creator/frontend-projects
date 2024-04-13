@@ -21,7 +21,7 @@ export function Recipe() {
 							height={300}
 						/>
 					</article>
-					<article className="instructions-card">
+					<article className="text-content">
 						<section className="title">
 							<h1 className="title-header">Simple Omelette Recipe</h1>
 							<p className="title-description">
