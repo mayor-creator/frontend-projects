@@ -1,0 +1,27 @@
+$font-family_serif: "Young Serif";
+$font-family_outfit: "Outfit";
+
+h1,
+h2 {
+  font-family: $font-family_serif;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 2.125rem + 0.4166666666666667vw, 2.5rem);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 1.75rem + 0vw, 1.75rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 1.25rem + 0vw, 1.25rem);
+  font-weight: 600;
+  font-family: $font-family_outfit;
+}
+
+p,
+li {
+  font-size: clamp(1rem, 1rem + 0vw, 1rem);
+  font-family: $font-family_outfit;
+}
