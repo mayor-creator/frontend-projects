@@ -1,0 +1,149 @@
+@use "../global/function" as f;
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  background-color: var(--color-white);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  flex: 1;
+}
+
+.text-content {
+  margin: auto;
+  width: 100%;
+  padding: f.px-to-rem(32);
+}
+
+.title {
+  padding-bottom: f.px-to-rem(32);
+
+  .title-header {
+    color: var(--color-dark-charcoal);
+    font-weight: 400;
+    padding-bottom: f.px-to-rem(24);
+  }
+}
+
+.preparation {
+  background: var(--color-rose-White);
+  border-radius: f.px-to-rem(20);
+  margin-bottom: f.px-to-rem(32);
+  line-height: 1.8;
+  padding: f.px-to-rem(24), f.px-to-rem(24);
+
+  .preparation-header {
+    padding: f.px-to-rem(24) f.px-to-rem(0) f.px-to-rem(16) f.px-to-rem(24);
+    color: var(--color-dark-raspberry);
+  }
+
+  .preparation-list {
+    max-width: f.px-to-rem(263);
+    margin-left: f.px-to-rem(24);
+    padding-left: f.px-to-rem(24);
+    padding-right: f.px-to-rem(24);
+    padding-bottom: f.px-to-rem(24);
+  }
+
+  .preparation-item {
+    padding-left: f.px-to-rem(16);
+  }
+}
+
+.ingredients {
+  margin-bottom: f.px-to-rem(32);
+  line-height: 1.8;
+
+  .ingredients-list {
+    padding-left: f.px-to-rem(24)
+  }
+
+  .ingredients-items {
+    padding-left: f.px-to-rem(16);
+  }
+}
+
+.instructions {
+  line-height: 1.8;
+  margin-bottom: f.px-to-rem(32);
+
+  .instructions-header {
+    padding-bottom: f.px-to-rem(20);
+  }
+
+  .instructions-list {
+    padding-left: f.px-to-rem(24)
+  }
+
+  .instructions-items {
+    padding-left: f.px-to-rem(16);
+  }
+}
+
+.nutrition {
+
+  .nutrition-header,
+  .nutrition-description {
+    padding-bottom: f.px-to-rem(24);
+  }
+
+  .nutrition-table-body {
+    padding-top: f.px-to-rem(20);
+    padding-bottom: f.px-to-rem(20);
+  }
+
+  .nutrition-amount {
+    color: #854632;
+    font-weight: bold;
+  }
+}
+
+.title,
+.preparation,
+.ingredients,
+.instructions,
+.nutrition {
+  max-width: f.px-to-rem(311);
+}
+
+.ingredients-header,
+.instructions-header,
+.nutrition-header {
+  color: var(--color-dark-raspberry);
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+span {
+  font-weight: bold;
+}
+
+hr {
+  margin-bottom: f.px-to-rem(32);
+}
+
+li::marker {
+  color: var(--color-dark-raspberry);
+  font-weight: 900;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr {
+  border-top: 1px solid black;
+}
