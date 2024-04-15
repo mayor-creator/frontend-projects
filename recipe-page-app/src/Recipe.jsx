@@ -102,26 +102,26 @@ export function Recipe() {
 								The table below shows nutritional values per serving without the
 								additional fillings.
 							</p>
-							<table>
-								<tbody>
+							<table className="nutrition-table">
+								<tbody className="nutrition-table-body">
 									<tr>
-										<td>Calories</td>
-										<td>277kcal</td>
+										<td className="nutrition-name">Calories</td>
+										<td className="nutrition-amount">277kcal</td>
 									</tr>
 
 									<tr>
-										<td>Carbs</td>
-										<td>0g</td>
+										<td className="nutrition-name">Carbs</td>
+										<td className="nutrition-amount">0g</td>
 									</tr>
 
 									<tr>
-										<td>Protein</td>
-										<td>20g</td>
+										<td className="nutrition-name">Protein</td>
+										<td className="nutrition-amount">20g</td>
 									</tr>
 
 									<tr>
-										<td>Fat</td>
-										<td>22g</td>
+										<td className="nutrition-name">Fat</td>
+										<td className="nutrition-amount">22g</td>
 									</tr>
 								</tbody>
 							</table>
