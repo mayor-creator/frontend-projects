@@ -33,13 +33,13 @@ export function Recipe() {
 						<section className="preparation">
 							<h3 className="preparation-header">Preparation time</h3>
 							<ul className="preparation-list">
-								<li>
+								<li className="preparation-item">
 									<span>Total</span>: Approximately 10 minutes
 								</li>
-								<li>
+								<li className="preparation-item">
 									<span>Preparation</span>: 5 minutes
 								</li>
-								<li>
+								<li className="preparation-item">
 									<span>Cooking</span>: 5 minutes
 								</li>
 							</ul>
