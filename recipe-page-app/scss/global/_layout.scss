@@ -1,0 +1,7 @@
+$desktop_width: 64em;
+
+@mixin desktop {
+  @media (min-width: #{$desktop_width}) {
+    @content;
+  }
+}
