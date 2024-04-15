@@ -47,11 +47,13 @@ export function Recipe() {
 						<section className="ingredients">
 							<h2 className="ingredients-header">Ingredients</h2>
 							<ul className="ingredients-list">
-								<li>2-3 large eggs</li>
-								<li>Salt, to taste 1</li>
-								<li>Pepper, to taste</li>
-								<li>tablespoon of butter or oil</li>
-								<li>
+								<li className="ingredients-items">2-3 large eggs</li>
+								<li className="ingredients-items">Salt, to taste 1</li>
+								<li className="ingredients-items">Pepper, to taste</li>
+								<li className="ingredients-items">
+									tablespoon of butter or oil
+								</li>
+								<li className="ingredients-items">
 									Optional fillings: cheese, diced vegetables, cooked meats,
 									herbs
 								</li>
