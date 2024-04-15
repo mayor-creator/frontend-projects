@@ -1,0 +1,8 @@
+/* 
+a function converting px to rem values
+1rem - 16px
+*/
+
+@function px-to-rem($px-value) {
+  @return ($px-value / 16)+rem;
+}
