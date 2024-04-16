@@ -1,4 +1,15 @@
+@use "../global/function" as f;
+@use "../global/layout" as l;
+
 body {
   background: var(--color-eggshell);
   color: var(--color-wenge-brown);
+
+  @include l.desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding: f.px-to-rem(40);
+  }
 }
