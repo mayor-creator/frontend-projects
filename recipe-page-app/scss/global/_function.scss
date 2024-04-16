@@ -2,7 +2,8 @@
 a function converting px to rem values
 1rem - 16px
 */
+@use "sass:math";
 
 @function px-to-rem($px-value) {
-  @return ($px-value / 16)+rem;
+  @return math.div($px-value, 16)+rem;
 }
