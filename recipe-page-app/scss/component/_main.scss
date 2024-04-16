@@ -9,13 +9,24 @@
 .wrapper {
   background-color: var(--color-white);
   width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
+
+  @include l.desktop {
+    width: f.px-to-rem(736);
+    margin-inline: auto;
+    border-radius: f.px-to-rem(20);
+  }
 }
 
 .card {
   flex: 1;
+}
+
+.image-card {
+  @include l.desktop {
+    padding: f.px-to-rem(40);
+  }
 }
 
 .text-content {
@@ -52,6 +63,10 @@
     padding-left: f.px-to-rem(24);
     padding-right: f.px-to-rem(24);
     padding-bottom: f.px-to-rem(24);
+
+    @include l.desktop {
+      max-width: f.px-to-rem(600);
+    }
   }
 
   .preparation-item {
@@ -113,6 +128,10 @@
 .instructions,
 .nutrition {
   max-width: f.px-to-rem(311);
+
+  @include l.desktop {
+    max-width: f.px-to-rem(656);
+  }
 }
 
 .ingredients-header,
@@ -125,6 +144,10 @@ img {
   height: auto;
   max-width: 100%;
   object-fit: contain;
+
+  @include l.desktop {
+    border-radius: f.px-to-rem(20);
+  }
 }
 
 span {
