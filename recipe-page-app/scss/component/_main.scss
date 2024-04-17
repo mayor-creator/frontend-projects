@@ -155,6 +155,8 @@ span {
 }
 
 hr {
+  border: f.px-to-rem(1) solid #E3DDD7;
+  width: 100%;
   margin-bottom: f.px-to-rem(32);
 }
 
