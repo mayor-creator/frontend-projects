@@ -20,7 +20,7 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Recipe Screenshot](./Recipe.png)
 
 ### Links
 
@@ -34,18 +34,22 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 
 ### What I learned
 
+- I choose to use SASS to style recipe component since it allows me to practice and improve my knowledge of SASS
+
 ### Continued development
+
+- How to effectively organize folder structure in SASS.
+- Lessons on mixins and functions.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Converting px to rem with Sass](https://notesontech.com/px-to-rem-with-sass/) - This helped me to understand how to write functions in SASS reason.
+- [The New SASS Module System: Out with @import, In with @use](https://stefaniefluin.medium.com/the-new-sass-module-system-out-with-import-in-with-use-e1bd8ba032d0) - This is an amazing article which helped me finally understand how to use @use and @forward in SASS. I'd recommend it to anyone still learning this concept and what to practice.
 
 ## Author
 
