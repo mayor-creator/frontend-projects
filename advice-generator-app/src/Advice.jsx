@@ -38,22 +38,20 @@ export function Advice() {
 	const message = Object.values(objectItems).map((item) => {
 		return (
 			<li key={item.id}>
-				<h1 className="font-extrabold text-neon-green text-center sm:py-5">
-					Advice #{item.id}
-				</h1>
-				<p className="font-extrabold text-[28px] text-center">{item.advice}</p>
+				<h1>Advice #{item.id}</h1>
+				<p>{item.advice}</p>
 			</li>
 		);
 	});
 
 	return (
 		<>
-			<main className="bg-dark-grayish-blue rounded-2xl sm:p-5 sm:max-[343px]:">
+			<main>
 				<section>
 					<ul>{message}</ul>
 				</section>
 
-				<section className="sm:p-5">
+				<section>
 					<picture>
 						<source
 							srcSet={mobile}
@@ -69,11 +67,8 @@ export function Advice() {
 						/>
 					</picture>
 
-					<button
-						className="bg-neon-green rounded-full absolute sm:mx-[120px]"
-						onClick={handleClick}>
+					<button onClick={handleClick}>
 						<img
-							className="mx-auto"
 							src={icon}
 							aria-label="hidden"></img>
 					</button>
