@@ -1,0 +1,46 @@
+@use "../util/" as u;
+
+body {
+  background-color: var(--dark-blue);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1,
+p {
+  text-align: center;
+  padding: u.rem(20);
+}
+
+h1 {
+  padding-bottom: 0rem;
+}
+
+img {
+  margin: auto;
+}
+
+button {
+  background-color: var(--neon-green);
+  border: none;
+  border-radius: u.rem(50);
+  display: block;
+  margin: auto;
+  height: u.rem(64);
+  width: u.rem(64);
+  position: relative;
+  top: u.rem(30);
+}
+
+.flex {
+  background-color: var(--dark-grayish-blue);
+  border-radius: u.rem(10);
+  width: min(100% - u.rem(32), u.rem(540));
+  margin-inline: auto;
+}

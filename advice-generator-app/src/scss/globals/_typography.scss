@@ -1,0 +1,18 @@
+@use "../util/" as u;
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(u.rem(24), 0.6434859154929577rem + 0.18779342723004694vw, u.rem(34));
+  color: var(--neon-green);
+}
+
+p {
+  font-size: clamp(u.rem(24), 1.4119718309859155rem + 0.3755868544600939vw, u.rem(28));
+  color: var(--light-cyan);
+}
