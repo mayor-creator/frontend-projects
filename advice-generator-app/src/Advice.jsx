@@ -3,6 +3,7 @@ import mobile from "./assets/images/pattern-divider-mobile.svg";
 import desktop from "./assets/images/pattern-divider-desktop.svg";
 
 import { useState, useEffect } from "react";
+import "../dist/style.css";
 
 export function Advice() {
 	const [data, setData] = useState({});
@@ -39,41 +40,41 @@ export function Advice() {
 		return (
 			<li key={item.id}>
 				<h1>Advice #{item.id}</h1>
-				<p>{item.advice}</p>
+				<p>&quot;{item.advice}&quot;</p>
 			</li>
 		);
 	});
 
 	return (
 		<>
-			<main>
-				<section>
-					<ul>{message}</ul>
-				</section>
-
-				<section>
-					<picture>
-						<source
-							srcSet={mobile}
-							media="(max-width:480px)"
-						/>
-						<source
-							srcSet={desktop}
-							media="(min-width:1440px)"
-						/>
-						<img
-							src={desktop}
-							className="sm:pb-5"
-						/>
-					</picture>
-
-					<button onClick={handleClick}>
-						<img
-							src={icon}
-							aria-label="hidden"></img>
-					</button>
-				</section>
-			</main>
+			<div className="flex">
+				<main className="flex-item">
+					<section>
+						<ul>{message}</ul>
+					</section>
+					<section>
+						<picture>
+							<source
+								srcSet={mobile}
+								media="(max-width:480px)"
+							/>
+							<source
+								srcSet={desktop}
+								media="(min-width:1440px)"
+							/>
+							<img
+								className="rectangle-image"
+								src={desktop}
+							/>
+						</picture>
+						<button onClick={handleClick}>
+							<img
+								src={icon}
+								aria-label="hidden"></img>
+						</button>
+					</section>
+				</main>
+			</div>
 		</>
 	);
 }
