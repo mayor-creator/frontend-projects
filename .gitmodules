@@ -1,0 +1,3 @@
+[submodule "github_user_search_app_component"]
+	path = github_user_search_app_component
+	url = https://github.com/mayor-creator/github_user_search_app_component.git
