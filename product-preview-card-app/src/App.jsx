@@ -1,5 +1,11 @@
+import { ProductCard } from "./assets/components/ProductCard";
+
 function App() {
-	return;
+	return (
+		<>
+			<ProductCard />
+		</>
+	);
 }
 
 export default App;
