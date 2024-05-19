@@ -9,8 +9,8 @@ export function ProductDescriptionCard() {
 				A floral, solar and voluptuous interpretation composed by Olivier Polge,
 				Perfumer-Creator for the House of CHANEL.
 			</p>
-			<p className="main__product--price"> $169.99</p>
-			<span className="main__product--discount"> $149.99</span>
+			<p className="main__product--price"> $149.99</p>
+			<span className="main__product--discount"> $169.99</span>
 			<button className="main__product--button">
 				<img
 					className="main__product--button-image"
