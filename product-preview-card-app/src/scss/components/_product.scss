@@ -1,0 +1,47 @@
+@use "../util/functions" as f;
+@use "../util/variables" as v;
+
+.main {
+  &__product--container {
+    background-color: var(--color-pure-white);
+  }
+
+  &__product--header {
+    font-family: v.$font-family-montserrat;
+    font-size: f.rem(12);
+    font-weight: v.$font-medium;
+    letter-spacing: f.rem(5);
+    text-transform: uppercase;
+  }
+
+  &__product--name {
+    line-height: 1.1;
+  }
+
+  &__product--price {
+    color: var(--color-deep-aquamarine);
+    font-family: v.$font-family-frances;
+    font-size: f.rem(32);
+    font-weight: v.$font-bold;
+  }
+
+  &__product--discount {
+    color: var(--color-aurometal-saurus);
+    font-family: v.$font-family-montserrat;
+    font-size: f.rem(14);
+    font-weight: v.$font-medium;
+    text-decoration: line-through;
+  }
+
+  &__product--button {
+    background-color: var(--color-deep-aquamarine);
+    border: none;
+    border-radius: f.rem(10);
+    color: var(--color-pure-white);
+    display: block;
+    width: f.rem(295);
+    height: f.rem(48);
+  }
+
+  &__product--button-image {}
+}

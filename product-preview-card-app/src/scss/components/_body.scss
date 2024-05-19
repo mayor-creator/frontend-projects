@@ -1,0 +1,16 @@
+@use "../util/functions" as f;
+@use "../util/variables" as v;
+
+body {
+  background-color: var(--color-cream);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: min(100% - f.rem(32), f.rem(600));
+  margin-inline: auto;
+  border: 2px solid red;
+}
