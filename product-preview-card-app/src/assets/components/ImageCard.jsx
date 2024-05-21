@@ -6,7 +6,7 @@ export function ImageCard() {
 		<>
 			<picture>
 				<source
-					media="(min-width:1200px)"
+					media="(min-width:768px)"
 					srcSet={desktopImage}
 					sizes="100vw"
 				/>
