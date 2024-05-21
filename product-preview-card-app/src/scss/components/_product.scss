@@ -1,21 +1,67 @@
+@use "../util/breakpoints" as b;
 @use "../util/functions" as f;
 @use "../util/variables" as v;
 
 .main {
+  @include b.breakpoint(medium) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__image {
+    border-top-right-radius: f.rem(10);
+    border-top-left-radius: f.rem(10);
+
+    @include b.breakpoint(medium) {
+      border-top-right-radius: f.rem(0);
+      border-bottom-left-radius: f.rem(10);
+    }
+  }
+
   &__product--container {
     background-color: var(--color-pure-white);
+    padding-left: f.rem(20);
+    padding-right: f.rem(10);
+    border-bottom-right-radius: f.rem(10);
+    border-bottom-left-radius: f.rem(10);
+
+    @include b.breakpoint(medium) {
+      border-top-right-radius: f.rem(10);
+      border-bottom-left-radius: f.rem(0);
+    }
   }
 
   &__product--header {
+    color: var(--color-aurometal-saurus);
     font-family: v.$font-family-montserrat;
     font-size: f.rem(12);
     font-weight: v.$font-medium;
     letter-spacing: f.rem(5);
     text-transform: uppercase;
+    padding-top: f.rem(20);
+
+    @include b.breakpoint(medium) {
+      padding-top: f.rem(40);
+    }
   }
 
   &__product--name {
+    color: var(--color-gunmental);
     line-height: 1.1;
+    font-family: v.$font-family-frances;
+    padding-right: f.rem(20);
+
+    @include b.breakpoint(medium) {
+      padding-right: f.rem(40);
+    }
+  }
+
+  &__product--description {
+    color: var(--color-aurometal-saurus);
+  }
+
+  &__product--price-container {
+    display: flex;
   }
 
   &__product--price {
@@ -31,17 +77,44 @@
     font-size: f.rem(14);
     font-weight: v.$font-medium;
     text-decoration: line-through;
+    padding: f.rem(15) 0rem 0rem f.rem(20);
   }
 
   &__product--button {
     background-color: var(--color-deep-aquamarine);
+    font-family: v.$font-family-montserrat;
+    font-size: f.rem(14);
+    font-weight: v.$font-bold;
     border: none;
     border-radius: f.rem(10);
     color: var(--color-pure-white);
-    display: block;
     width: f.rem(295);
     height: f.rem(48);
+    margin-bottom: f.rem(20);
+    padding-bottom: f.rem(10);
+    padding-top: f.rem(10);
+
+    @include b.breakpoint(medium) {
+      width: f.rem(236);
+    }
   }
 
-  &__product--button-image {}
+  &__product--button:hover {
+    background-color: var(--color-deep-aquamarine-hover);
+    cursor: pointer;
+  }
+
+  &__product--button-image {
+    margin: 0 auto;
+    display: inline-block;
+    padding-right: f.rem(10);
+  }
+}
+
+.item {
+  padding-bottom: f.rem(14);
+
+  @include b.breakpoint(medium) {
+    padding-bottom: f.rem(20);
+  }
 }
