@@ -33,7 +33,7 @@ export function MetricForm() {
 
 	return (
 		<>
-			<form>
+			<form className="header__hero-form">
 				<label htmlFor="height">Height</label>
 				<div>
 					<input
@@ -61,10 +61,12 @@ export function MetricForm() {
 				</div>
 			</form>
 			<div>
-				<div>
-					<p> Your BMI is...</p>
-					<p>{metricResult}</p>
-					<p>
+				<div className="header__form_result">
+					<div className="header__form-result-item">
+						<p className="header__form-result-message"> Your BMI is...</p>
+						<p className="header__form-result-explanation">{metricResult}</p>
+					</div>
+					<p className="header__form-result-detail">
 						Your BMI suggests you&apos;re {message}. Your ideal weight is
 						between
 					</p>

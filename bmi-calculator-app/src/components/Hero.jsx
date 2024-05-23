@@ -1,6 +1,11 @@
 import { useState } from "react";
+
 import logo from "../assets/images/logo.svg";
+import manEating from "../assets/images/image-man-eating.webp";
+
 import { MetricForm } from "./MetricForm";
+import { ImperialForm } from "./ImperialForm";
+import { Results } from "./Results";
 
 export function Hero() {
 	const [metric, setMetric] = useState(true);
@@ -39,45 +44,66 @@ export function Hero() {
 								point to evaluate your overall health and well-being.
 							</p>
 						</div>
-						<div className="header__mass_item">
-							<h3 className="header__mass-detail-header">
-								Enter your details below
-							</h3>
-							<div className="header__mass-radio">
-								<p className="header__mass-metric">
+						<div className="header__form">
+							<h3 className="header__form-header">Enter your details below</h3>
+							<div className="header__form-radio">
+								<p className="header__form-radio-metric">
 									<input
 										type="radio"
 										name="mass"
 										id="metric"
 										checked={metric}
 										onChange={handleMetricChange}
-										className="header__mass-metric-radio"
 									/>
 									<label
 										htmlFor="metric"
-										className="header__mass-metric-label">
+										className="header__form-radio-label">
 										Metric
 									</label>
 								</p>
 
-								<p className="header__mass-imperial">
+								<p className="header__form-radio-metric">
 									<input
 										type="radio"
 										name="mass"
 										id="imperial"
 										checked={imperial}
 										onChange={handleImperialChange}
-										className="header__mass-imperial-radio"
 									/>
-									<label htmlFor="imperial">Imperial</label>
+									<label
+										htmlFor="imperial"
+										className="header__form-radio-label">
+										Imperial
+									</label>
 								</p>
 							</div>
 							{/* TO DO ADD COMPONENT FOR METRIC AND IMPERIAL BASED ON RADIO BUTTON SELECTION */}
 							{metric && <MetricForm />}
+							{imperial && <ImperialForm />}
 						</div>
 					</div>
 				</div>
 			</header>
+			{(metric || imperial) && (
+				<Results>
+					<img
+						src={manEating}
+						alt="image of a man eating food"
+					/>
+					<div>
+						<h2>What your BMI result means</h2>
+						<>
+							A BMI range of 18.5 to 24.9 is considered a 'healthy weight.'
+							Maintaining a healthy weight may lower your chances of
+							experiencing health issues later on, such as obesity and type 2
+							diabetes. Aim for a nutritious diet with reduced fat and sugar
+							content, incorporating ample fruits and vegetables. Additionally,
+							strive for regular physical activity, ideally about 30 minutes
+							daily for five days a week.
+						</>
+					</div>
+				</Results>
+			)}
 		</>
 	);
 }

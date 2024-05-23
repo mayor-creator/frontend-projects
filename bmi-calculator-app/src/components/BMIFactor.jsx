@@ -29,7 +29,7 @@ export function BMIFactor() {
 					</div>
 					<p>
 						The development and body fat composition of girls and boys vary with
-						age. Consequently, a child's age and gender are considered when
+						age. Consequently, a child&apos;s age and gender are considered when
 						evaluating their BMI.
 					</p>
 				</div>
@@ -60,7 +60,7 @@ export function BMIFactor() {
 					</div>
 					<p>
 						BMI may misclassify muscular individuals as overweight or obese, as
-						it doesn't differentiate muscle from fat.
+						it doesn&apos;t differentiate muscle from fat.
 					</p>
 				</div>
 				<div>
