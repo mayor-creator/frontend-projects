@@ -5,7 +5,7 @@ export function Results({ children }) {
 	return (
 		<>
 			<main className="main">
-				<div className="results">{children}</div>
+				<section className="results">{children}</section>
 				<HealthTips />
 				<BMIFactor />
 			</main>
