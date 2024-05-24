@@ -4,9 +4,10 @@
 @use "../util/variables" as v;
 
 .header {
+  padding-bottom: f.rem(60);
+
   &__container {
     @include m.flex_center_items_column;
-    border: 2px solid red;
   }
 
   &__mass-container {
@@ -52,11 +53,9 @@
   &__form-radio-container {
     display: flex;
     align-items: center;
+    @include m.center;
     padding-top: f.rem(24);
     padding-bottom: f.rem(24);
-    margin-left: auto;
-    margin-right: auto;
-    max-width: f.rem(280);
   }
 
   &__form-radio-label {
@@ -66,20 +65,18 @@
   &__height-container, &__weight-container {
     display: flex;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: f.rem(280);
+    @include m.center;
     padding-top: f.rem(8);
     padding-bottom: f.rem(16);
   }
 
   &__height-span,
   &__weight-span {
-    position: relative;
-    right: f.rem(55);
+    color: var(--color-blue);
     font-size: f.rem(24);
     font-weight: v.$font-semi-bold;
-    color: var(--color-blue);
+    position: relative;
+    right: f.rem(55);
   }
 
   &__metric_height,
@@ -91,17 +88,17 @@
   &__imperial-container {
     display: flex;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: f.rem(280);
+    @include m.center;
     padding-top: f.rem(8);
     padding-bottom: f.rem(16);
   }
 
   &__imperial-label,
   &__metric-label {
-    font-size: f.rem(14);
     color: var(--color-dark-electric-blue);
+    display: block;
+    @include m.center;
+    font-size: f.rem(14);
   }
 
   &__imperial-feet,
@@ -113,28 +110,26 @@
   }
 
   &__imperial-span {
+    color: var(--color-blue);
     font-size: f.rem(24);
     font-weight: v.$font-semi-bold;
-    color: var(--color-blue);
     position: relative;
     right: f.rem(45);
   }
 
   &__imperial-pounds-span {
+    color: var(--color-blue);
     font-size: f.rem(24);
     font-weight: v.$font-semi-bold;
-    color: var(--color-blue);
     position: relative;
     right: f.rem(55);
   }
 
   &__form-result {
-    max-width: f.rem(280);
-    margin-left: auto;
-    margin-right: auto;
     background-color: var(--color-blue);
     border-radius: f.rem(10);
-    padding: f.rem(32)
+    @include m.center;
+    padding: f.rem(32);
   }
 
   &__form-result-message {

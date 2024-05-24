@@ -31,12 +31,12 @@
 }
 
 @mixin radio_button_hover {
-  color: hsl(227, 92%, 58%);
-  border: f.rem(1) solid hsl(227, 92%, 58%);
+  color: var(--color-blue);
+  border: f.rem(1) solid var(--color-blue);
 }
 
 @mixin radio_button_active {
-  background-color: hsl(227, 92%, 58%);
+  background-color: var(--color-blue);
 }
 
 @mixin textfield_number_default {
@@ -57,4 +57,10 @@
 @mixin textfield_number_filled {
   border: 1px solid hsl(200, 24%, 88%);
   color: var(--color-gun-mental);
+}
+
+@mixin center {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: f.rem(280);
 }
