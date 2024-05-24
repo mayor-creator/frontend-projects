@@ -62,7 +62,7 @@ export function ImperialForm() {
 						className="header__imperial-feet"
 						type="number"
 						name="feet"
-						id="feet"
+						id="height"
 						required
 						value={feet}
 						onChange={handleFeetChange}
@@ -72,7 +72,7 @@ export function ImperialForm() {
 						className="header__imperial-inches"
 						type="number"
 						name="inches"
-						id="inches"
+						id="height"
 						required
 						value={inches}
 						onChange={handleInchesChange}
@@ -90,7 +90,7 @@ export function ImperialForm() {
 						className="header__imperial-stones"
 						type="number"
 						name="stones"
-						id="stones"
+						id="weight"
 						value={stones}
 						onChange={handleStonesChange}
 						required
@@ -100,7 +100,7 @@ export function ImperialForm() {
 						className="header__imperial-pounds"
 						type="number"
 						name="pounds"
-						id="pounds"
+						id="weight"
 						value={pounds}
 						onChange={handlePoundsChange}
 						required
