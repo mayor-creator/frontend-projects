@@ -1,3 +1,196 @@
 @use "../util/breakpoints" as b;
+@use "../util/functions" as f;
+@use "../util/mixins" as m;
+@use "../util/variables" as v;
 
-@use .header {}
+.header {
+  &__container {
+    @include m.flex_center_items_column;
+    border: 2px solid red;
+  }
+
+  &__mass-container {
+    padding-left: f.rem(15);
+    padding-right: f.rem(15);
+  }
+
+  &__logo {
+    margin-top: f.rem(24);
+    width: f.rem(40);
+    height: f.rem(40);
+  }
+
+  &__mass-item {
+    padding-bottom: f.rem(24);
+  }
+
+  &__mass-header {
+    color: var(--color-gun-mental);
+    text-align: center;
+    padding-top: f.rem(24);
+  }
+
+  &__mass-info {
+    color: var(--color-dark-electric-blue);
+    text-align: center;
+    padding-top: f.rem(24);
+  }
+
+  &__form {
+    border: 1px solid green;
+    border-radius: f.rem(10);
+    padding-top: f.rem(24);
+    padding-bottom: f.rem(24);
+    margin-top: f.rem(24);
+  }
+
+  &__form-header {
+    color: var(--color-gun-mental);
+    text-align: center;
+  }
+
+  &__form-radio-container {
+    display: flex;
+    align-items: center;
+    padding-top: f.rem(24);
+    padding-bottom: f.rem(24);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: f.rem(280);
+  }
+
+  &__form-radio-label {
+    @include m.radio_button_label
+  }
+
+  &__height-container, &__weight-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: f.rem(280);
+    padding-top: f.rem(8);
+    padding-bottom: f.rem(16);
+  }
+
+  &__height-span,
+  &__weight-span {
+    position: relative;
+    right: f.rem(55);
+    font-size: f.rem(24);
+    font-weight: v.$font-semi-bold;
+    color: var(--color-blue);
+  }
+
+  &__metric_height,
+  &__metric_weight {
+    height: f.rem(69);
+    width: f.rem(280);
+  }
+
+  &__imperial-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: f.rem(280);
+    padding-top: f.rem(8);
+    padding-bottom: f.rem(16);
+  }
+
+  &__imperial-label,
+  &__metric-label {
+    font-size: f.rem(14);
+    color: var(--color-dark-electric-blue);
+  }
+
+  &__imperial-feet,
+  &__imperial-inches,
+  &__imperial-stones,
+  &__imperial-pounds {
+    height: f.rem(69);
+    width: f.rem(132);
+  }
+
+  &__imperial-span {
+    font-size: f.rem(24);
+    font-weight: v.$font-semi-bold;
+    color: var(--color-blue);
+    position: relative;
+    right: f.rem(45);
+  }
+
+  &__imperial-pounds-span {
+    font-size: f.rem(24);
+    font-weight: v.$font-semi-bold;
+    color: var(--color-blue);
+    position: relative;
+    right: f.rem(55);
+  }
+
+  &__form-result {
+    max-width: f.rem(280);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--color-blue);
+    border-radius: f.rem(10);
+    padding: f.rem(32)
+  }
+
+  &__form-result-message {
+    color: var(--color-pure-white);
+    font-weight: v.$font-semi-bold;
+  }
+
+  &__form-result-explanation {
+    color: var(--color-pure-white);
+    font-size: f.rem(48);
+    font-weight: v.$font-semi-bold;
+    padding-bottom: f.rem(24);
+  }
+
+  &__form-result-detail {
+    color: var(--color-pure-white);
+    font-size: f.rem(14);
+  }
+}
+
+input[type="radio"] {
+  @include m.radio_button_default;
+}
+
+input[type="radio"]:hover {
+  @include m.radio_button_hover;
+}
+
+input[type="radio"]:checked {
+  @include m.radio_button_active;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  appearance: textfield;
+  @include m.textfield_number_default;
+}
+
+input[type=number]:focus {
+  @include m.textfield_number_focus;
+}
+
+input[type=number]:valid {
+  @include m.textfield_number_filled;
+}
+
+.metric-label {
+  padding-right: f.rem(60);
+}
+
+.wrapper {
+  //border: 2px solid red;
+  width: min(100% - f.rem(32), f.rem(1276));
+}
