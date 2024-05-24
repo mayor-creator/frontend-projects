@@ -52,9 +52,14 @@ export function ImperialForm() {
 	return (
 		<>
 			<form className="header__hero-form">
-				<label htmlFor="height">Height</label>
-				<div>
+				<label
+					htmlFor="height"
+					className="header__imperial-label">
+					Height
+				</label>
+				<div className="header__imperial-container">
 					<input
+						className="header__imperial-feet"
 						type="number"
 						name="feet"
 						id="feet"
@@ -62,8 +67,9 @@ export function ImperialForm() {
 						value={feet}
 						onChange={handleFeetChange}
 					/>
-					<span>ft</span>
+					<span className="header__imperial-span">ft</span>
 					<input
+						className="header__imperial-inches"
 						type="number"
 						name="inches"
 						id="inches"
@@ -71,12 +77,17 @@ export function ImperialForm() {
 						value={inches}
 						onChange={handleInchesChange}
 					/>
-					<span>in</span>
+					<span className="header__imperial-span">in</span>
 				</div>
 
-				<label htmlFor="weight">Weight</label>
-				<div>
+				<label
+					htmlFor="weight"
+					className="header__imperial-label">
+					Weight
+				</label>
+				<div className="header__imperial-container">
 					<input
+						className="header__imperial-stones"
 						type="number"
 						name="stones"
 						id="stones"
@@ -84,8 +95,9 @@ export function ImperialForm() {
 						onChange={handleStonesChange}
 						required
 					/>
-					<span>st</span>
+					<span className="header__imperial-span">st</span>
 					<input
+						className="header__imperial-pounds"
 						type="number"
 						name="pounds"
 						id="pounds"
@@ -93,7 +105,7 @@ export function ImperialForm() {
 						onChange={handlePoundsChange}
 						required
 					/>
-					<span>lbs</span>
+					<span className="header__imperial-pounds-span">lbs</span>
 				</div>
 			</form>
 			<div className="header__form-result">
@@ -102,7 +114,8 @@ export function ImperialForm() {
 					<p className="header__form-result-explanation">{imperialResult}</p>
 				</div>
 				<p className="header__form-result-detail">
-					Your BMI suggests you&apos;re {message}. Your ideal weight is between
+					Your BMI suggests you&apos;re a {message}. Your ideal weight is
+					between
 				</p>
 			</div>
 		</>

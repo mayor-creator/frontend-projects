@@ -46,36 +46,35 @@ export function Hero() {
 						</div>
 						<div className="header__form">
 							<h3 className="header__form-header">Enter your details below</h3>
-							<div className="header__form-radio">
-								<p className="header__form-radio-metric">
-									<input
-										type="radio"
-										name="mass"
-										id="metric"
-										checked={metric}
-										onChange={handleMetricChange}
-									/>
+							<div className="header__form-radio-container">
+								<div className="header__form-radio-metric">
 									<label
 										htmlFor="metric"
-										className="header__form-radio-label">
+										className="header__form-radio-label metric-label">
+										<input
+											type="radio"
+											name="mass"
+											id="metric"
+											checked={metric}
+											onChange={handleMetricChange}
+										/>
 										Metric
 									</label>
-								</p>
-
-								<p className="header__form-radio-metric">
-									<input
-										type="radio"
-										name="mass"
-										id="imperial"
-										checked={imperial}
-										onChange={handleImperialChange}
-									/>
+								</div>
+								<div className="header__form-radio-imperial">
 									<label
 										htmlFor="imperial"
 										className="header__form-radio-label">
+										<input
+											type="radio"
+											name="mass"
+											id="imperial"
+											checked={imperial}
+											onChange={handleImperialChange}
+										/>
 										Imperial
 									</label>
-								</p>
+								</div>
 							</div>
 							{/* TO DO ADD COMPONENT FOR METRIC AND IMPERIAL BASED ON RADIO BUTTON SELECTION */}
 							{metric && <MetricForm />}

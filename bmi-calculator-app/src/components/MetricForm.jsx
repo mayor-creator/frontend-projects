@@ -34,9 +34,14 @@ export function MetricForm() {
 	return (
 		<>
 			<form className="header__hero-form">
-				<label htmlFor="height">Height</label>
-				<div>
+				<label
+					htmlFor="height"
+					className="header__metric-label">
+					Height
+				</label>
+				<div className="header__height-container">
 					<input
+						className="header__metric_height"
 						type="number"
 						name="height"
 						id="height"
@@ -44,12 +49,17 @@ export function MetricForm() {
 						value={height}
 						onChange={handleHeightChange}
 					/>
-					<span>cm</span>
+					<span className="header__height-span">cm</span>
 				</div>
 
-				<label htmlFor="weight">Weight</label>
-				<div>
+				<label
+					htmlFor="weight"
+					className="header__metric-label">
+					Weight
+				</label>
+				<div className="header__weight-container">
 					<input
+						className="header__metric_weight"
 						type="number"
 						name="weight"
 						id="weight"
@@ -57,17 +67,17 @@ export function MetricForm() {
 						onChange={handleWeightChange}
 						required
 					/>
-					<span>kg</span>
+					<span className="header__weight-span">kg</span>
 				</div>
 			</form>
 			<div>
-				<div className="header__form_result">
+				<div className="header__form-result">
 					<div className="header__form-result-item">
 						<p className="header__form-result-message"> Your BMI is...</p>
 						<p className="header__form-result-explanation">{metricResult}</p>
 					</div>
 					<p className="header__form-result-detail">
-						Your BMI suggests you&apos;re {message}. Your ideal weight is
+						Your BMI suggests you&apos;re a {message}. Your ideal weight is
 						between
 					</p>
 				</div>
