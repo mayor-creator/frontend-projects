@@ -1,1 +1,60 @@
 @use "./functions" as f;
+@use "./variables" as v;
+
+@mixin flex_center_items_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin radio_button_label {
+  color: var(--color-gun-mental);
+  font-size: f.rem(16);
+  font-weight: v.$font-semi-bold;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  gap: f.rem(18);
+  cursor: pointer;
+}
+
+@mixin radio_button_default {
+  appearance: none;
+  margin: 0;
+  width: f.rem(31);
+  height: f.rem(31);
+  color: hsl(190, 23%, 53%);
+  border: f.rem(1) solid hsl(190, 23%, 53%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@mixin radio_button_hover {
+  color: hsl(227, 92%, 58%);
+  border: f.rem(1) solid hsl(227, 92%, 58%);
+}
+
+@mixin radio_button_active {
+  background-color: hsl(227, 92%, 58%);
+}
+
+@mixin textfield_number_default {
+  border-radius: f.rem(10);
+  border: 1px solid hsl(200, 24%, 88%);
+  color: hsl(200, 24%, 88%);
+  font-size: f.rem(24);
+  font-weight: v.$font-semi-bold;
+  padding-left: f.rem(32);
+  cursor: pointer;
+}
+
+@mixin textfield_number_focus {
+  border: 1px solid var(--color-gun-mental) !important;
+  color: var(--color-gun-mental);
+}
+
+@mixin textfield_number_filled {
+  border: 1px solid hsl(200, 24%, 88%);
+  color: var(--color-gun-mental);
+}
