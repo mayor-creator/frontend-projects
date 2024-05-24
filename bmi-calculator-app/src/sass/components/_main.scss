@@ -1,0 +1,202 @@
+@use "../util/breakpoints" as b;
+@use "../util/functions" as f;
+@use "../util/mixins" as m;
+@use "../util/variables" as v;
+
+.main {
+  padding-bottom: f.rem(80);
+
+  &__results {
+    padding-bottom: f.rem(60);
+  }
+
+  &__image {
+    padding-bottom: f.rem(48);
+  }
+
+  &__result-header {
+    color: var(--color-gun-mental);
+    padding-bottom: f.rem(32);
+  }
+
+  &__result-meaning {
+    color: var(--color-dark-electric-blue);
+    font-weight: v.$font-regular;
+    font-size: f.rem(16);
+  }
+
+  &__health-tips {}
+
+  &__health-tips-container {}
+
+  &__health-tips-eating {
+    padding-bottom: f.rem(40);
+  }
+
+  &__health-tips-eating-image {
+    padding-bottom: f.rem(24);
+  }
+
+  &__health-tips-eating-header {
+    padding-bottom: f.rem(24);
+    color: var(--color-gun-mental);
+  }
+
+  &__health-tips-eating-info {
+    color: var(--color-dark-electric-blue);
+  }
+
+  &__health-tips-exercise {
+    padding-bottom: f.rem(40);
+  }
+
+  &__health-tips-exercise-image {
+    padding-bottom: f.rem(24);
+  }
+
+  &__health-tips-exercise-header {
+    padding-bottom: f.rem(24);
+    color: var(--color-gun-mental);
+  }
+
+  &__health-tips-exercise-info {
+    color: var(--color-dark-electric-blue);
+    padding-right: f.rem(20);
+  }
+
+  &__health-tips-sleep {
+    padding-bottom: f.rem(40);
+  }
+
+  &__health-tips-sleep-image {
+    padding-bottom: f.rem(24);
+  }
+
+  &__health-tips-sleep-header {
+    padding-bottom: f.rem(24);
+    color: var(--color-gun-mental);
+  }
+
+  &__health-tips-sleep-info {
+    color: var(--color-dark-electric-blue);
+  }
+
+  &__bmi-facts {}
+
+  &__bmi-facts-limitations {
+    padding-bottom: f.rem(56);
+  }
+
+  &__bmi-facts-limitations-header {
+    color: var(--color-gun-mental);
+    text-align: center;
+    padding-bottom: f.rem(32);
+  }
+
+  &__bmi-facts-limitations-info {
+    text-align: center;
+    color: var(--color-dark-electric-blue);
+    padding-left: f.rem(10);
+    padding-right: f.rem(10);
+  }
+
+  &__bmi-facts-gender-header {
+    color: var(--color-gun-mental);
+  }
+
+  &__bmi-facts-gender-info {
+    color: var(--color-dark-electric-blue);
+    font-size: f.rem(16);
+    font-weight: v.$font-regular;
+    padding-left: f.rem(24);
+    padding-right: f.rem(24);
+    padding-bottom: f.rem(24);
+  }
+
+  &__bmi-facts-age-header {
+    color: var(--color-gun-mental);
+  }
+
+  &__bmi-facts-age-info {
+    color: var(--color-dark-electric-blue);
+    font-size: f.rem(16);
+    font-weight: v.$font-regular;
+    padding-left: f.rem(24);
+    padding-right: f.rem(24);
+    padding-bottom: f.rem(24);
+  }
+
+  &__bmi-facts-muscle-header {
+    color: var(--color-gun-mental);
+  }
+
+  &__bmi-facts-muscle-info {
+    color: var(--color-dark-electric-blue);
+    font-size: f.rem(16);
+    font-weight: v.$font-regular;
+    padding-left: f.rem(24);
+    padding-right: f.rem(24);
+    padding-bottom: f.rem(24);
+  }
+
+  &__bmi-facts-pregnancy-header {
+    color: var(--color-gun-mental);
+  }
+
+  &__bmi-facts-pregnancy-info {
+    color: var(--color-dark-electric-blue);
+    font-size: f.rem(16);
+    font-weight: v.$font-regular;
+    padding-left: f.rem(24);
+    padding-right: f.rem(24);
+    padding-bottom: f.rem(24);
+  }
+
+  &__bmi-facts-race-header {
+    color: var(--color-gun-mental);
+  }
+
+  &__bmi-facts-race-info {
+    color: var(--color-dark-electric-blue);
+    font-size: f.rem(16);
+    font-weight: v.$font-regular;
+    padding-left: f.rem(24);
+    padding-right: f.rem(24);
+    padding-bottom: f.rem(24);
+  }
+
+  &__bmi-facts-gender,
+  &__bmi-facts-age,
+  &__bmi-facts-muscle,
+  &__bmi-facts-pregnancy,
+  &__bmi-facts-race {
+    margin-bottom: f.rem(16);
+    border: 1px solid rebeccapurple;
+    border-radius: f.rem(10);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: f.rem(16);
+    padding-top: f.rem(24);
+    padding-bottom: f.rem(16);
+    padding-left: f.rem(24);
+  }
+}
+
+.result_wrapper {
+  width: min(100% - f.rem(32), f.rem(465));
+  margin-inline: auto;
+}
+
+.wrapper-health-tips {
+  width: min(100% - f.rem(32), f.rem(1392));
+  margin-inline: auto;
+}
+
+.wrapper-bmi-facts {
+  width: min(100% - f.rem(32), f.rem(1160));
+  border: 2px solid red;
+  margin-inline: auto;
+}
