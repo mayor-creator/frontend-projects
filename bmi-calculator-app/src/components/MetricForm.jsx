@@ -33,41 +33,45 @@ export function MetricForm() {
 
 	return (
 		<>
-			<form className="header__hero-form">
-				<label
-					htmlFor="height"
-					className="header__metric-label">
-					Height
-				</label>
-				<div className="header__height-container">
-					<input
-						className="header__metric_height"
-						type="number"
-						name="height"
-						id="height"
-						required
-						value={height}
-						onChange={handleHeightChange}
-					/>
-					<span className="header__height-span">cm</span>
+			<form className="header__hero-form header__hero-form-metric">
+				<div className="header__hero-form-item">
+					<label
+						htmlFor="height"
+						className="header__metric-label">
+						Height
+					</label>
+					<div className="header__height-container">
+						<input
+							className="header__metric_height"
+							type="number"
+							name="height"
+							id="height"
+							required
+							value={height}
+							onChange={handleHeightChange}
+						/>
+						<span className="header__height-span">cm</span>
+					</div>
 				</div>
 
-				<label
-					htmlFor="weight"
-					className="header__metric-label">
-					Weight
-				</label>
-				<div className="header__weight-container">
-					<input
-						className="header__metric_weight"
-						type="number"
-						name="weight"
-						id="weight"
-						value={weight}
-						onChange={handleWeightChange}
-						required
-					/>
-					<span className="header__weight-span">kg</span>
+				<div className="header__hero-form-item">
+					<label
+						htmlFor="weight"
+						className="header__metric-label">
+						Weight
+					</label>
+					<div className="header__weight-container">
+						<input
+							className="header__metric_weight"
+							type="number"
+							name="weight"
+							id="weight"
+							value={weight}
+							onChange={handleWeightChange}
+							required
+						/>
+						<span className="header__weight-span">kg</span>
+					</div>
 				</div>
 			</form>
 			<div>

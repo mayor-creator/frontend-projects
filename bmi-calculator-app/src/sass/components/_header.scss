@@ -38,16 +38,23 @@
   }
 
   &__form {
-    border: 1px solid green;
-    border-radius: f.rem(10);
     padding-top: f.rem(24);
     padding-bottom: f.rem(24);
     margin-top: f.rem(24);
+    @include m.box-shadow;
+
+    @include b.breakpoint(medium) {
+      padding: f.rem(32);
+    }
   }
 
   &__form-header {
     color: var(--color-gun-mental);
     text-align: center;
+
+    @include b.breakpoint(medium) {
+      text-align: start;
+    }
   }
 
   &__form-radio-container {
@@ -56,6 +63,11 @@
     @include m.center;
     padding-top: f.rem(24);
     padding-bottom: f.rem(24);
+
+    @include b.breakpoint(medium) {
+      max-width: f.rem(622);
+      margin: 0rem;
+    }
   }
 
   &__form-radio-label {
@@ -130,6 +142,11 @@
     border-radius: f.rem(10);
     @include m.center;
     padding: f.rem(32);
+
+    @include b.breakpoint(medium) {
+      margin: 0rem;
+      max-width: none;
+    }
   }
 
   &__form-result-message {
@@ -147,6 +164,14 @@
   &__form-result-detail {
     color: var(--color-pure-white);
     font-size: f.rem(14);
+  }
+
+  &__hero-form-metric {
+    @include b.breakpoint(medium) {
+      display: flex;
+      gap: f.rem(24);
+    }
+
   }
 }
 
@@ -183,6 +208,10 @@ input[type=number]:valid {
 
 .metric-label {
   padding-right: f.rem(60);
+
+  @include b.breakpoint(medium) {
+    padding-right: f.rem(200);
+  }
 }
 
 .wrapper {

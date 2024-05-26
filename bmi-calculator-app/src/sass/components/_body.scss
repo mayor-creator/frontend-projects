@@ -1,5 +1,8 @@
 @use "../util/variables" as v;
 
 body {
+  background-color: var(--color-pure-white);
   font-family: v.$font-family;
+  background: rgb(214, 230, 254);
+  background: linear-gradient(90deg, rgba(214, 230, 254, 0.5) 0%, rgba(214, 252, 254, 0.5025641025641026) 100%);
 }
