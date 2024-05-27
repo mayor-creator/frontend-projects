@@ -8,10 +8,29 @@
 
   &__results {
     padding-bottom: f.rem(60);
+
+    @include b.breakpoint(medium) {
+      display: grid;
+      grid-template-columns: f.rem(300) 1fr;
+      gap: f.rem(50);
+    }
+
+    @include b.breakpoint(large) {
+      @include m.grid-results;
+    }
   }
 
   &__image {
     padding-bottom: f.rem(48);
+
+    @include b.breakpoint(medium) {
+      width: f.rem(360.96);
+    }
+
+    @include b.breakpoint(large) {
+      grid-area: 1 / 1 / 2 / 7;
+      width: f.rem(564);
+    }
   }
 
   &__result-header {
@@ -23,6 +42,18 @@
     color: var(--color-dark-electric-blue);
     font-weight: v.$font-regular;
     font-size: f.rem(16);
+  }
+
+  &__health-tips {
+    @include b.breakpoint(large) {
+      padding-bottom: f.rem(60);
+    }
+  }
+
+  &__health-tips-container {
+    @include b.breakpoint(large) {
+      @include m.grid-health-tips;
+    }
   }
 
   &__health-tips-eating {
@@ -83,6 +114,29 @@
     @include b.breakpoint(medium) {
       display: flex;
     }
+
+    @include b.breakpoint(large) {
+      display: block;
+    }
+  }
+
+  &__health-tips-eating {
+    @include b.breakpoint(large) {
+      grid-area: 1 / 1 / 2 / 5;
+    }
+  }
+
+  &__health-tips-sleep {
+    @include b.breakpoint(large) {
+      grid-area: 1 / 9 / 2 / 13;
+    }
+  }
+
+  &__health-tips-exercise {
+    @include b.breakpoint(large) {
+
+      grid-area: 1 / 5 / 2 / 9;
+    }
   }
 
   &__health-tips-eating-image,
@@ -97,11 +151,19 @@
     @include b.breakpoint(medium) {
       padding-left: f.rem(40);
     }
+
+    @include b.breakpoint(large) {
+      padding-left: f.rem(0);
+    }
   }
 
   &__bmi-facts {
     @include b.breakpoint(medium) {
       @include m.grid;
+    }
+
+    @include b.breakpoint(large) {
+      @include m.grid-desktop;
     }
   }
 
@@ -111,12 +173,20 @@
     @include b.breakpoint(medium) {
       grid-area: 1/1/2/3;
     }
+
+    @include b.breakpoint(large) {
+      grid-area: 1/1/2/7;
+    }
   }
 
   &__bmi-facts-limitations-header {
     color: var(--color-gun-mental);
     text-align: center;
     padding-bottom: f.rem(32);
+
+    @include b.breakpoint(large) {
+      text-align: start;
+    }
   }
 
   &__bmi-facts-limitations-info {
@@ -128,6 +198,12 @@
     @include b.breakpoint(medium) {
       padding-left: f.rem(32);
       padding-right: f.rem(32);
+    }
+
+    @include b.breakpoint(large) {
+      text-align: start;
+      padding-right: f.rem(32);
+      padding-left: f.rem(0);
     }
   }
 
@@ -171,11 +247,21 @@
     @include b.breakpoint(medium) {
       grid-area: 2/1/3/2;
     }
+
+    @include b.breakpoint(large) {
+      grid-area: 1/8/2/12;
+      max-height: f.rem(232);
+    }
   }
 
   &__bmi-facts-age {
     @include b.breakpoint(medium) {
       grid-area: 2/2/3/3;
+    }
+
+    @include b.breakpoint(large) {
+      grid-area: 2 / 5 / 3 / 9;
+      max-height: f.rem(232);
     }
   }
 
@@ -183,11 +269,21 @@
     @include b.breakpoint(medium) {
       grid-area: 3/1/4/2;
     }
+
+    @include b.breakpoint(large) {
+      grid-area: 2 / 9 / 3 / 13;
+      max-height: f.rem(232);
+    }
   }
 
   &__bmi-facts-pregnancy {
     @include b.breakpoint(medium) {
       grid-area: 3/2/4/3;
+    }
+
+    @include b.breakpoint(large) {
+      grid-area: 3 / 3 / 4 / 7;
+      max-height: f.rem(232);
     }
   }
 
@@ -196,6 +292,11 @@
       grid-column: 1 / 3;
       max-width: f.rem(365);
       margin: auto;
+    }
+
+    @include b.breakpoint(large) {
+      grid-area: 3 / 7 / 4 / 11;
+      max-height: f.rem(232);
     }
   }
 
@@ -212,13 +313,6 @@
       padding-left: f.rem(32);
     }
   }
-
-  &__image {
-    @include b.breakpoint(medium) {
-      width: f.rem(360.96);
-      height: f.rem(411.09);
-    }
-  }
 }
 
 .result_wrapper {
@@ -226,13 +320,18 @@
   margin-inline: auto;
 
   @include b.breakpoint(medium) {
-    width: none;
-    margin-inline: 0rem;
+    width: 100%;
+  }
+
+  @include b.breakpoint(large) {
+    grid-area: 1 / 8 / 2 / 13;
+    width: 100%;
+    align-self: center;
   }
 }
 
 .wrapper-health-tips {
-  width: min(100% - f.rem(32), f.rem(1392));
+  width: min(100% - f.rem(32), f.rem(1159));
   margin-inline: auto;
 }
 

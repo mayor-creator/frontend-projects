@@ -50,12 +50,12 @@
 }
 
 @mixin textfield_number_focus {
-  border: 1px solid var(--color-gun-mental) !important;
+  border: f.rem(1) solid var(--color-gun-mental) !important;
   color: var(--color-gun-mental);
 }
 
 @mixin textfield_number_filled {
-  border: 1px solid hsl(200, 24%, 88%);
+  border: f.rem(1) solid hsl(200, 24%, 88%);
   color: var(--color-gun-mental);
 }
 
@@ -68,7 +68,7 @@
 @mixin box-shadow {
   background-color: var(--color-pure-white);
   border-radius: f.rem(20);
-  box-shadow: 0 25px 50px -12px hsla(0, 0%, 0%, 0.25);
+  box-shadow: 0 f.rem(25) f.rem(50) f.rem(-12) hsla(0, 0%, 0%, 0.25);
 }
 
 @mixin grid {
@@ -80,4 +80,36 @@
 
 @mixin max-grid-width {
   max-width: f.rem(335.5);
+}
+
+@mixin grid-desktop {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: f.rem(16);
+}
+
+@mixin grid-health-tips {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: f.rem(32);
+}
+
+@mixin grid-results {
+  width: min(100% - f.rem(32), f.rem(1200));
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: f.rem(16);
+}
+
+@mixin grid-header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: f.rem(16);
+  justify-content: center;
+  align-items: center;
 }
