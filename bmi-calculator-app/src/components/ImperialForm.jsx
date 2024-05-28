@@ -28,15 +28,17 @@ export function ImperialForm() {
 		const inchesValue = 12;
 		const poundsValue = 14;
 		//converting feet to inches;
-		let height = feet * inchesValue + inches;
+		let height = Number(feet) * Number(inchesValue) + Number(inches);
 		//converting stones to pounds
-		let weight = stones * poundsValue + pounds;
+		let weight = Number(stones) * Number(poundsValue) + Number(pounds);
 		//calculating bmi result
-		let result = (weight / (height * height)) * imperial;
+		let result = Number((weight / (height * height)) * imperial);
 		return result;
 	}
 
-	let imperialResult = bMICalculation(feet, inches, stones, pounds).toFixed(1);
+	let imperialResult = Number(
+		bMICalculation(feet, inches, stones, pounds).toFixed(1)
+	);
 
 	let message = "";
 	if (imperialResult < 18.5) {

@@ -18,9 +18,9 @@ export function MetricForm() {
 		return result;
 	}
 
-	let metricResult = bMICalculation(weight, height).toFixed(1);
-	let message = "";
+	let metricResult = Number(bMICalculation(weight, height).toFixed(1));
 
+	let message = "";
 	if (metricResult < 18.5) {
 		message = "underweight";
 	} else if (metricResult <= 24.9) {
