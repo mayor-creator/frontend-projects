@@ -4,283 +4,287 @@
 @use "../util/variables" as v;
 
 .header {
-  padding-bottom: f.rem(60);
+	padding-bottom: f.rem(60);
 
-  &__container {
-    @include m.flex_center_items_column;
+	&__container {
+		@include m.flex_center_items_column;
 
-    @include b.breakpoint(large) {
-      display: block;
-    }
-  }
+		@include b.breakpoint(large) {
+			display: block;
+		}
+	}
 
-  &__mass-container {
-    padding-left: f.rem(15);
-    padding-right: f.rem(15);
-  }
+	&__mass-container {
+		padding-left: f.rem(15);
+		padding-right: f.rem(15);
+	}
 
-  &__logo {
-    margin-top: f.rem(24);
-    width: f.rem(40);
-    height: f.rem(40);
+	&__logo {
+		margin-top: f.rem(24);
+		width: f.rem(40);
+		height: f.rem(40);
 
-    @include b.breakpoint(large) {
-      margin-left: f.rem(100);
-    }
-  }
+		@include b.breakpoint(large) {
+			margin-left: f.rem(100);
+		}
+	}
 
-  &__mass-item {
-    padding-bottom: f.rem(24);
+	&__mass-item {
+		padding-bottom: f.rem(24);
 
-    @include b.breakpoint(large) {
-      grid-area: 1 / 1 / 2 / 6;
-    }
-  }
+		@include b.breakpoint(large) {
+			grid-area: 1 / 1 / 2 / 6;
+		}
+	}
 
-  &__mass-header {
-    color: var(--color-gun-mental);
-    text-align: center;
-    padding-top: f.rem(24);
+	&__mass-header {
+		color: var(--color-gun-mental);
+		text-align: center;
+		padding-top: f.rem(24);
 
-    @include b.breakpoint(large) {
-      text-align: start;
-    }
-  }
+		@include b.breakpoint(large) {
+			text-align: start;
+		}
+	}
 
-  &__mass-info {
-    color: var(--color-dark-electric-blue);
-    text-align: center;
-    padding-top: f.rem(24);
+	&__mass-info {
+		color: var(--color-dark-electric-blue);
+		text-align: center;
+		padding-top: f.rem(24);
 
-    @include b.breakpoint(large) {
-      text-align: start;
-    }
-  }
+		@include b.breakpoint(large) {
+			text-align: start;
+		}
+	}
 
-  &__form {
-    padding-top: f.rem(24);
-    padding-bottom: f.rem(24);
-    margin-top: f.rem(24);
-    @include m.box-shadow;
+	&__form {
+		padding-top: f.rem(24);
+		padding-bottom: f.rem(24);
+		margin-top: f.rem(24);
+		@include m.box-shadow;
 
-    @include b.breakpoint(medium) {
-      padding: f.rem(32);
-    }
+		@include b.breakpoint(medium) {
+			padding: f.rem(32);
+		}
 
-    @include b.breakpoint(large) {
-      grid-area: 1 / 7 / 2 / 13;
-    }
-  }
+		@include b.breakpoint(large) {
+			grid-area: 1 / 7 / 2 / 13;
+		}
+	}
 
-  &__form-header {
-    color: var(--color-gun-mental);
-    text-align: center;
+	&__form-header {
+		color: var(--color-gun-mental);
+		text-align: center;
 
-    @include b.breakpoint(medium) {
-      text-align: start;
-    }
-  }
+		@include b.breakpoint(medium) {
+			text-align: start;
+		}
+	}
 
-  &__form-radio-container {
-    display: flex;
-    align-items: center;
-    @include m.center;
-    padding-top: f.rem(24);
-    padding-bottom: f.rem(24);
+	&__form-radio-container {
+		display: flex;
+		align-items: center;
+		@include m.center;
+		padding-top: f.rem(24);
+		padding-bottom: f.rem(24);
 
-    @include b.breakpoint(medium) {
-      max-width: f.rem(622);
-      margin: 0rem;
-      padding-top: f.rem(32);
-      padding-bottom: f.rem(32);
-    }
-  }
+		@include b.breakpoint(medium) {
+			max-width: f.rem(622);
+			margin: 0rem;
+			padding-top: f.rem(32);
+			padding-bottom: f.rem(32);
+		}
+	}
 
-  &__form-radio-label {
-    @include m.radio_button_label
-  }
+	&__form-radio-label {
+		@include m.radio_button_label
+	}
 
-  &__height-container, &__weight-container {
-    display: flex;
-    align-items: center;
-    @include m.center;
-    padding-top: f.rem(8);
-    padding-bottom: f.rem(16);
-  }
+	&__height-container, &__weight-container {
+		display: flex;
+		align-items: center;
+		@include m.center;
+		padding-top: f.rem(8);
+		padding-bottom: f.rem(16);
+	}
 
-  &__height-span,
-  &__weight-span {
-    color: var(--color-blue);
-    font-size: f.rem(24);
-    font-weight: v.$font-semi-bold;
-    position: relative;
-    right: f.rem(55);
-  }
+	&__height-span,
+	&__weight-span {
+		color: var(--color-blue);
+		font-size: f.rem(24);
+		font-weight: v.$font-semi-bold;
+		position: relative;
+		right: f.rem(55);
+	}
 
-  &__metric_height,
-  &__metric_weight {
-    height: f.rem(69);
-    width: f.rem(280);
+	&__metric_height,
+	&__metric_weight {
+		height: f.rem(69);
+		width: f.rem(280);
 
-    @include b.breakpoint(large) {
-      width: f.rem(238);
-    }
-  }
+		@include b.breakpoint(large) {
+			width: f.rem(238);
+		}
+	}
 
-  &__imperial-container {
-    display: flex;
-    align-items: center;
-    @include m.center;
-    padding-top: f.rem(8);
-    padding-bottom: f.rem(16);
+	&__imperial-container {
+		display: flex;
+		align-items: center;
+		@include m.center;
+		padding-top: f.rem(8);
+		padding-bottom: f.rem(16);
 
-    @include b.breakpoint(large) {
-      margin-left: 0rem;
-      margin-right: 0rem;
-    }
-  }
+		@include b.breakpoint(large) {
+			margin-left: 0rem;
+			margin-right: 0rem;
+		}
+	}
 
-  &__imperial-label,
-  &__metric-label {
-    color: var(--color-dark-electric-blue);
-    display: block;
-    @include m.center;
-    font-size: f.rem(14);
+	&__imperial-label,
+	&__metric-label {
+		color: var(--color-dark-electric-blue);
+		display: block;
+		@include m.center;
+		font-size: f.rem(14);
 
-    @include b.breakpoint(large) {
-      margin-left: 0rem;
-      margin-right: 0rem;
-    }
-  }
+		@include b.breakpoint(large) {
+			margin-left: 0rem;
+			margin-right: 0rem;
+		}
+	}
 
-  &__imperial-feet,
-  &__imperial-inches,
-  &__imperial-stones,
-  &__imperial-pounds {
-    height: f.rem(69);
-    width: f.rem(132);
+	&__imperial-feet,
+	&__imperial-inches,
+	&__imperial-stones,
+	&__imperial-pounds {
+		height: f.rem(69);
+		width: f.rem(132);
 
-    @include b.breakpoint(large) {
-      width: f.rem(238);
-    }
-  }
+		@include b.breakpoint(large) {
+			width: f.rem(238);
+		}
+	}
 
-  &__imperial-span {
-    color: var(--color-blue);
-    font-size: f.rem(24);
-    font-weight: v.$font-semi-bold;
-    position: relative;
-    right: f.rem(45);
-  }
+	&__imperial-span {
+		color: var(--color-blue);
+		font-size: f.rem(24);
+		font-weight: v.$font-semi-bold;
+		position: relative;
+		right: f.rem(45);
+	}
 
-  &__imperial-pounds-span {
-    color: var(--color-blue);
-    font-size: f.rem(24);
-    font-weight: v.$font-semi-bold;
-    position: relative;
-    right: f.rem(55);
-  }
+	&__imperial-pounds-span {
+		color: var(--color-blue);
+		font-size: f.rem(24);
+		font-weight: v.$font-semi-bold;
+		position: relative;
+		right: f.rem(55);
+	}
 
-  &__form-result {
-    background-color: var(--color-blue);
-    border-radius: f.rem(10);
-    @include m.center;
-    padding: f.rem(32);
+	&__form-result {
+		background-color: var(--color-blue);
+		border-radius: f.rem(10);
+		@include m.center;
+		padding: f.rem(32);
 
-    @include b.breakpoint(medium) {
-      border-top-right-radius: f.rem(160);
-      border-bottom-right-radius: f.rem(160);
-      border-top-left-radius: f.rem(20);
-      border-bottom-left-radius: f.rem(20);
-      margin: 0rem;
-      max-width: f.rem(500);
-      max-height: f.rem(166);
-      display: flex;
-      align-items: center;
-    }
-  }
+		@include b.breakpoint(medium) {
+			border-top-right-radius: f.rem(160);
+			border-bottom-right-radius: f.rem(160);
+			border-top-left-radius: f.rem(20);
+			border-bottom-left-radius: f.rem(20);
+			margin: 0rem;
+			max-width: f.rem(500);
+			max-height: f.rem(166);
+			display: flex;
+			align-items: center;
+		}
+	}
 
-  &__form-result-item {
-    @include b.breakpoint(medium) {
-      padding-right: f.rem(120);
-    }
-  }
+	&__form-result-item {
+		@include b.breakpoint(medium) {
+			padding-right: f.rem(120);
+		}
+	}
 
-  &__form-result-message {
-    color: var(--color-pure-white);
-    font-weight: v.$font-semi-bold;
-  }
+	&__form-result-message {
+		color: var(--color-pure-white);
+		font-weight: v.$font-semi-bold;
+	}
 
-  &__form-result-explanation {
-    color: var(--color-pure-white);
-    font-size: f.rem(48);
-    font-weight: v.$font-semi-bold;
-    padding-bottom: f.rem(24);
-  }
+	&__form-result-explanation {
+		color: var(--color-pure-white);
+		font-size: f.rem(48);
+		font-weight: v.$font-semi-bold;
+		padding-bottom: f.rem(24);
+	}
 
-  &__form-result-detail {
-    color: var(--color-pure-white);
-    font-size: f.rem(14);
-  }
+	&__form-result-detail {
+		color: var(--color-pure-white);
+		font-size: f.rem(14);
+	}
 
-  &__hero-form-metric,
-  &__hero-form-imperial {
-    @include b.breakpoint(medium) {
-      display: flex;
-      gap: f.rem(24);
-      padding-bottom: f.rem(32);
-    }
-  }
+	&__hero-form-metric,
+	&__hero-form-imperial {
+		@include b.breakpoint(medium) {
+			display: flex;
+			gap: f.rem(24);
+			padding-bottom: f.rem(32);
+		}
 
-  &__hero-form-imperial {
-    display: block;
-  }
+		@include b.breakpoint(large) {
+			gap: 0rem;
+		}
+	}
+
+	&__hero-form-imperial {
+		display: block;
+	}
 }
 
 input[type="radio"] {
-  @include m.radio_button_default;
+	@include m.radio_button_default;
 }
 
 input[type="radio"]:hover {
-  @include m.radio_button_hover;
+	@include m.radio_button_hover;
 }
 
 input[type="radio"]:checked {
-  @include m.radio_button_active;
+	@include m.radio_button_active;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 input[type=number] {
-  appearance: textfield;
-  @include m.textfield_number_default;
+	appearance: textfield;
+	@include m.textfield_number_default;
 }
 
 input[type=number]:focus {
-  @include m.textfield_number_focus;
+	@include m.textfield_number_focus;
 }
 
 input[type=number]:valid {
-  @include m.textfield_number_filled;
+	@include m.textfield_number_filled;
 }
 
 .metric-label {
-  padding-right: f.rem(60);
+	padding-right: f.rem(60);
 
-  @include b.breakpoint(medium) {
-    padding-right: f.rem(200);
-  }
+	@include b.breakpoint(medium) {
+		padding-right: f.rem(200);
+	}
 }
 
 .wrapper {
-  width: min(100% - f.rem(32), f.rem(1276));
-  margin-inline: auto;
+	width: min(100% - f.rem(32), f.rem(1276));
+	margin-inline: auto;
 
-  @include b.breakpoint(large) {
-    @include m.grid-header;
-  }
+	@include b.breakpoint(large) {
+		@include m.grid-header;
+	}
 }
