@@ -30,7 +30,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Mobile](./mobile.png)
+![Desktop](./desktop.png)
 
 ### Links
 
@@ -50,17 +51,25 @@ Users should be able to:
 
 ### What I learned
 
+- Implementing different logic behind metric or imperial selection using React Conditional
+- Writing Sass mixins
+- Brief introduction to Jest
+
 ### Continued development
+
+- React Lessons
+- Responsive Design
+- React Test Library and Jest
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Passing Props to a Component](https://react.dev/learn/describing-the-ui) - This helped me to understand how to pass props to components and how to pass JSX as children. It is a great resources for anyone starting out on React.
+
+- [Testing a React App Built with Vite Using Jest and Babel](https://blog.seancoughlin.me/testing-a-react-app-built-with-vite-using-jest-and-babel) - This article outline the process of setting up Jest Test Environment and it helped to start using Jest and React Test Library.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@mayor-creator](https://www.frontendmentor.io/profile/mayor-creator)
+- Threads - [@mayor_creator](https://www.threads.net/@mayor_creator)
 
 ## Acknowledgments
