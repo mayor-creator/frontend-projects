@@ -74,12 +74,12 @@ export function MetricForm() {
 					</div>
 				</div>
 			</form>
-			<div>
-				<div className="header__form-result">
-					<div className="header__form-result-item">
-						<p className="header__form-result-message"> Your BMI is...</p>
-						<p className="header__form-result-explanation">{metricResult}</p>
-					</div>
+			<div className="header__form-result">
+				<div className="header__form-result-item header__result-item">
+					<p className="header__form-result-message"> Your BMI is...</p>
+					<p className="header__form-result-explanation">{metricResult}</p>
+				</div>
+				<div className="header__form-result-item">
 					<p className="header__form-result-detail">
 						Your BMI suggests you&apos;re a {message}. Your ideal weight is
 						between

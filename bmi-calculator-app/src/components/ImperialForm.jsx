@@ -114,14 +114,16 @@ export function ImperialForm() {
 				</div>
 			</form>
 			<div className="header__form-result">
-				<div className="header__form-result-item">
+				<div className="header__form-result-item header__result-item">
 					<p className="header__form-result-message"> Your BMI is...</p>
 					<p className="header__form-result-explanation">{imperialResult}</p>
 				</div>
-				<p className="header__form-result-detail">
-					Your BMI suggests you&apos;re a {message}. Your ideal weight is
-					between
-				</p>
+				<div className="header__form-result-item">
+					<p className="header__form-result-detail">
+						Your BMI suggests you&apos;re a {message}. Your ideal weight is
+						between
+					</p>
+				</div>
 			</div>
 		</>
 	);
