@@ -31,6 +31,18 @@ export function MetricForm() {
 		message = "obese";
 	}
 
+	let resultMessage = "";
+	if (!isFinite(metricResult) || isNaN(metricResult)) {
+		resultMessage = `Invalid values provided. Please enter a valid numbers for weight and
+				height`;
+	} else {
+		resultMessage = `Your BMI is...`;
+	}
+
+	let resultClass = isFinite(metricResult)
+		? "header__form-result-message"
+		: "header__form-result-message--error";
+
 	return (
 		<>
 			<form className="header__hero-form header__hero-form-metric">
@@ -76,15 +88,19 @@ export function MetricForm() {
 			</form>
 			<div className="header__form-result">
 				<div className="header__form-result-item header__result-item">
-					<p className="header__form-result-message"> Your BMI is...</p>
-					<p className="header__form-result-explanation">{metricResult}</p>
+					<p className={resultClass}>{resultMessage}</p>
+					{isFinite(metricResult) && (
+						<p className="header__form-result-explanation">{metricResult}</p>
+					)}
 				</div>
-				<div className="header__form-result-item">
-					<p className="header__form-result-detail">
-						Your BMI suggests you&apos;re a {message}. Your ideal weight is
-						between
-					</p>
-				</div>
+				{isFinite(metricResult) && (
+					<div className="header__form-result-item">
+						<p className="header__form-result-detail">
+							Your BMI suggests you&apos;re a {message}. Your ideal weight is
+							between
+						</p>
+					</div>
+				)}
 			</div>
 		</>
 	);

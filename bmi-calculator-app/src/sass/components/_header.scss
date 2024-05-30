@@ -294,3 +294,8 @@ input[type=number]:valid {
     @include m.grid-header;
   }
 }
+
+.header__form-result-message--error {
+  color: hsl(347, 90%, 39%);
+  font-weight: v.$font-semi-bold;
+}

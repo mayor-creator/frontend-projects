@@ -3,7 +3,6 @@ import { useState } from "react";
 export function ImperialForm() {
 	const [feet, setFeet] = useState(5);
 	const [inches, setInches] = useState(11);
-
 	const [stones, setStones] = useState(11);
 	const [pounds, setPounds] = useState(4);
 
@@ -50,6 +49,18 @@ export function ImperialForm() {
 	} else {
 		message = "obese";
 	}
+
+	let resultMessage = "";
+	if (!isFinite(imperialResult) || isNaN(imperialResult)) {
+		resultMessage = `Invalid values provided. Please enter a valid numbers for weight and
+				height`;
+	} else {
+		resultMessage = `Your BMI is...`;
+	}
+
+	let resultClass = isFinite(imperialResult)
+		? "header__form-result-message"
+		: "header__form-result-message--error";
 
 	return (
 		<>
@@ -115,15 +126,19 @@ export function ImperialForm() {
 			</form>
 			<div className="header__form-result">
 				<div className="header__form-result-item header__result-item">
-					<p className="header__form-result-message"> Your BMI is...</p>
-					<p className="header__form-result-explanation">{imperialResult}</p>
+					<p className={resultClass}>{resultMessage}</p>
+					{isFinite(imperialResult) && (
+						<p className="header__form-result-explanation">{imperialResult}</p>
+					)}
 				</div>
-				<div className="header__form-result-item">
-					<p className="header__form-result-detail">
-						Your BMI suggests you&apos;re a {message}. Your ideal weight is
-						between
-					</p>
-				</div>
+				{isFinite(imperialResult) && (
+					<div className="header__form-result-item">
+						<p className="header__form-result-detail">
+							Your BMI suggests you&apos;re a {message}. Your ideal weight is
+							between
+						</p>
+					</div>
+				)}
 			</div>
 		</>
 	);
