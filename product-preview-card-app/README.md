@@ -46,16 +46,19 @@ Users should be able to:
 
 ### What I learned
 
+- How to use SASS with React
+
 ### Continued development
+
+- to continue learning about responsive design and SASS
 
 ### Useful resources
 
 - [Guide to Using SASS with Your React Projects](https://medium.com/@jadencook.us/getting-started-with-sass-a-step-by-step-guide-to-using-sass-with-your-react-projects-5c8876fe27e4) - This article explains how to implement SASS into your react app and breakdown with examples helped to understand how SASS works with react apps.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Threads - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@mayor-creator](https://www.frontendmentor.io/profile/mayor-creator)
+- Threads - [@mayor_creator](https://www.threads.net/@mayor_creator)
 
 ## Acknowledgments
